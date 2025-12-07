@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sürpriz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f3ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    img {
+      width: 220px;
+      margin-bottom: 20px;
+    }
+    .box {
+      width: 200px;
+      height: 120px;
+      background: #fff;
+      border: 3px solid #d4b4ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.2s;
+      user-select: none;
+    }
+    .box:hover {
+      transform: scale(1.05);
+      background: #f9f2ff;
+    }
+    #note {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #6b3fa0;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.imgur.com/VV9hZtZ.png" alt="Tatlı Peluş" />
+    <div class="box" oncontextmenu="showNote(event)">Bu mesaj size</div>
+    <div id="note">💜 Seni seviyorum 💜</div>
+  </div>
+
+  <script>
+    function showNote(e) {
+      e.preventDefault(); // Sağ tık menüsünü engelle
+      document.getElementById("note").style.display = "block";
+    }
+  </script>
+</body>
+</html>
